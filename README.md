@@ -11,7 +11,7 @@
 # How to use
 
 ```
-pip3 instal os
+pip3 install os
 pip3 install sys
 ```
 ### Change in main.py array with types to be cleaned
