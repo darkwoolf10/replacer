@@ -1,6 +1,8 @@
 import replacer 
 
-jsFiles = replacer.getFilesInCurrentDir()   
-
+# my types for clear
+types = ["js", "php"]
+# get file in dir
+jsFiles = replacer.getFilesInCurrentDir(types)   
+# clear
 replacer.replace(jsFiles)    
-

@@ -1,12 +1,20 @@
 import os
+import sys
 
 # take all js files in current dir
-def getFilesInCurrentDir():
+# types is the file types
+def getFilesInCurrentDir(types=[]):
+    if types == []:
+        print("No file types specified for getFilesInCurrentDir function")
+        sys.exit()
     files = os.listdir()
     jsFiles = []
     for key in files:
-        if key[-2:] == "js":
-            jsFiles.append(key)
+        file = key.split(".")
+        file = file[-1:]
+        for type in types:
+            if file[0] == type:
+                jsFiles.append(key)
     return jsFiles
 
 def outputFiles(jsFiles):
