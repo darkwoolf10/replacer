@@ -23,6 +23,6 @@ def replace(jsFiles):
         lines = currentFile.readlines()
         currentFile = open(file, "w")
         for line in lines:
-            if line[:2] != "//":
+            if '//' not in line:
                 currentFile.write(line)
-        currentFile.close() 
+        currentFile.close()
